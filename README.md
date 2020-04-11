@@ -37,13 +37,21 @@
 - ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"``` for oh-my-zsh
 - ```ZSH_DISABLE_COMPFIX=true``` in zshrc BEFORE oh-my-zsh is sourced then update
   - ```upgrade_oh_my_zsh```
-  - resolves permission issues
+  - resolves permission issues as per [this](https://github.com/ohmyzsh/ohmyzsh/issues/6835)
 - Spotify: ```brew cask install spotify```
   - move to Dock
-- 
+- ```brew install pyenv``` and ```brew install openssl readline sqlite3 xz zlib``` for dependecies on mac
+  - add ```if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi``` to .zshrc (if bash, use bash_profile), credit for this is [nicolashery](https://github.com/nicolashery/mac-dev-setup#iterm2) and [wiki](https://github.com/pyenv/pyenv/wiki)
+- ```pyenv install 3.6.10``` for purposes of tensorflow
+- ```pyenv install anaconda3-5.3.1``` for scientific computing
+  - ```pyenv shell anaconda3-5.3.1``` switch into anaconda
+  - ```conda install jupyter``` to allow for jupyter notebook
+-
+ 
 
 
-
+## TODO
 - git config - fancier
 - git ignore - detailed
-
+- Node (npm)
+- Check if anaconda environment will run tensorflow 
