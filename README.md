@@ -1,1 +1,25 @@
-Setup (Everything) for MacOS
+# Personal Setup for macOS
+## Basic Settings/Setup
+- Download Google Chrome at [website](https://www.google.com/chrome/)
+  - Set as default browser
+  - Sign in to Chrome user accounts
+- Dock
+  - Remove: System Preferences (accessible from top-left logo anyway), Safari, Mail, Maps, Contacts, Photos, Reminders, iTunes, Podcasts, AppleTV, News, and App Store
+  - Remember that these are accessible via ```Cmd + [space]``` (spotlight search)
+  - In System Preferences, set automatic hide and show
+- Keyboard
+  - Key Repeat = Fast
+  - Delay Until Repeat = Short
+  - Turn off backlight after 10 seconds of inactivity
+- Trackpad
+  - Tap to Click = On (feels nicer)
+  - Uncheck Smart Zoom and Rotate (Scroll & Zoom tab)
+  - 
+- Finder
+  - Sidebar: home, Downloads, Desktop, Applications
+  - new Finder window shows: home
+- Menubar
+  - Show Bluetooth in menubar
+  - Show battery % in menubar
+- Spotlight
+  - Uncheck: Fonts, Images, Documents
