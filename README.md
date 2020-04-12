@@ -2,8 +2,7 @@
 ## Basic Settings/Setup - Download Google Chrome at [website](https://www.google.com/chrome/) Set as default browser
   - Sign in to Chrome user accounts
 - Dock
-  - Remove: System Preferences (accessible from top-left logo anyway), Safari, Mail, Maps, Contacts, Photos, Reminders, iTunes, Podcasts, AppleTV, News, and App Store
-  - Remember that these are accessible via ```Cmd + [space]``` (spotlight search)
+  - Remove: System Preferences (accessible from top-left logo anyway), Safari, Mail, Maps, Contacts, Photos, Reminders, iTunes, Podcasts, AppleTV, News, and App Store Remember that these are accessible via ```Cmd + [space]``` (spotlight search)
   - In System Preferences, set automatic hide and show
 - Keyboard
   - Key Repeat = Fast Delay Until Repeat = Short
@@ -108,4 +107,5 @@ fi
 - Airmail/Polymail/smth
 - Notebooks (app)
 - Alfred for Mac
+- Fix colors from Apple Accessibility
 
