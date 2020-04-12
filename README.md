@@ -29,8 +29,7 @@
 - ```brew install git``` 
 - iTerm2: ```brew cask install iterm2```
   - add to Dock
-- ```git config --global user.name "kvenkatesh5"```
-- ```git config --global user.email "..."```
+- ```git config --global user.name "kvenkatesh5"``` - ```git config --global user.email "..."```
 - ```brew install vim``` installs dependencies for vim
 - ```brew install nvim``` because I want to use neovim!
 - ```brew install zsh``` but for macOS Catalina it should already be set as default shell type [in case](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
@@ -48,6 +47,24 @@
   - ```conda install jupyter``` to allow for jupyter notebook
 -
  
+## Dotfile management
+- ```mv ~/.gitconfig ~/dotfiles/.gitconfig```
+- ```ln -sv ~/dotfiles/.gitconfig ~``` sets up symbolic link
+
+## nvim
+- ```mkdir ~/dotfiles/nvim```
+- ```mkdir ~/.config```
+- ```ln -sv ~/dotfiles/nvim ~/.config/```
+- ```mv .zshrc dotfiles```
+- ```ln -sv ~/dotfiles/.zshrc ~/.zshrc```
+- add to .zshrc 
+```if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi```
+- ```curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim``` to download vimplug
+- look at init.vim file for neovim setup (has brief documentation as well)
+  - note ```:so %``` inside nvim sources init.vim file
 
 
 ## TODO
