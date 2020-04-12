@@ -58,7 +58,8 @@
 - ```mv .zshrc dotfiles```
 - ```ln -sv ~/dotfiles/.zshrc ~/.zshrc```
 - add to .zshrc 
-```if type nvim > /dev/null 2>&1; then
+```
+if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi
 ```

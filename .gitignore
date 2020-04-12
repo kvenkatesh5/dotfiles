@@ -1,0 +1,9 @@
+.DS_Store
+
+# tex
+*.log
+*.bak
+*.swp
+
+# plugins directory (for nvim specifically) since I would need to deal with submodules
+nvim/plugins/*
