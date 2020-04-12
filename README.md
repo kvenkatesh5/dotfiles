@@ -46,7 +46,17 @@
   - ```pyenv shell anaconda3-5.3.1``` switch into anaconda
   - ```conda install jupyter``` to allow for jupyter notebook
 -
- 
+
+## iterm2 customization
+- make a new iterm2 profile for following customizations
+- solarized color in iterm2
+- follow instructions [here](https://gist.github.com/kevin-smets/8568070)
+- download source code pro + font awesome
+- use powerline10k as instructed [here](https://gist.github.com/kevin-smets/8568070)
+- enable instant prompt warnings
+- enable autosuggestions as instructed [here](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh) (towards bottom of page)
+- 
+
 ## Dotfile management
 - ```mv ~/.gitconfig ~/dotfiles/.gitconfig```
 - ```ln -sv ~/dotfiles/.gitconfig ~``` sets up symbolic link
