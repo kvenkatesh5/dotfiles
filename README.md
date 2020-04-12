@@ -8,8 +8,7 @@
   - Remember that these are accessible via ```Cmd + [space]``` (spotlight search)
   - In System Preferences, set automatic hide and show
 - Keyboard
-  - Key Repeat = Fast
-  - Delay Until Repeat = Short
+  - Key Repeat = Fast Delay Until Repeat = Short
   - Turn off backlight after 10 seconds of inactivity
 - Trackpad
   - Tap to Click = On (feels nicer)
@@ -59,6 +58,7 @@
 - 
 
 ## Dotfile management
+- ```ln -s``` creates symbolic link, ```-v``` makes it verbose
 - ```mv ~/.gitconfig ~/dotfiles/.gitconfig```
 - ```ln -sv ~/dotfiles/.gitconfig ~``` sets up symbolic link
 
@@ -82,11 +82,14 @@ fi
 - ```brew install tmux```
 - add tmux plugin to zshrc
 - basics learned [here](https://www.youtube.com/watch?v=BHhA_ZKjyxo&t=514s) and [here](https://www.youtube.com/watch?v=norO25P7xHg)
-
+- check out the hotkeys in [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/tmux)
+- plug 'christoomey/vim-tmux-navigator' in init.vim
+- after making .tmux.conf file, run ```ln -sv ~/dotfiles/.tmux.conf ~/.tmux.conf```
+- use this for .tmux.conf to incorporate vim [here](https://github.com/dduan/dotfiles/blob/master/.tmux.conf)
+- to source the file, go into tmux and reach command prompt (via ```C-b :```) and type ```source-file ~/.tmux.conf```
 
 ## TODO
 - git config - fancier
 - git ignore - detailed
 - Node (npm)
-- Check if anaconda environment will run tensorflow 
-- macos file
+- Check if anaconda environment will run tensorflow macos file 

@@ -1,9 +1,17 @@
 " map leader
-let mapleader = ";"
-
+let mapleader = ";" 
 call plug#begin('~/.config/nvim/plugins')
 Plug 'scrooloose/nerdtree' " file management
 Plug 'vim-airline/vim-airline' " status bar
+Plug 'christoomey/vim-tmux-navigator' " tmux integration
+
+" Auto close parens, braces, brackets, etc
+Plug 'jiangmiao/auto-pairs'
+
+" Convenience for commenting things in and out
+Plug 'scrooloose/nerdcommenter'
+
+" LSP + autocomplete
 
 " Initialize plugin system
 call plug#end()
@@ -20,22 +28,40 @@ set ruler
 " allow (normal) backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" Automatic indentation is good
+set autoindent
+
+" j/k will move virtual lines (lines that wrap)
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
 " share clipboard w macOS
 set clipboard=unnamed
 
 " split behavior
 set splitbelow
-set splitright
-
+set splitright 
 " fix my common vim typos
 cmap Wq wq
 cmap Q q
+cmap W w
 
 " fast escape
 inoremap <silent> jk <esc>:set timeoutlen=500<cr>
 vnoremap <silent> jk <esc>:set timeoutlen=500<cr>
 
+" In many terminal emulators the mouse works just fine, thus enable it.
+set mouse=a
+
+" python3
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 " toggle NerdTree
 nnoremap <leader>a :NERDTreeToggle<cr>
 " close vim if the last window is NerdTree
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" LSP + autocomplete
+" enable ncm2 for all buffers
+" autocmd BufEnter * call ncm2#enable_for_buffer()
+" set completeopt=noinsert,menuone,noselect
