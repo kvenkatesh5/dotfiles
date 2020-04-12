@@ -1,7 +1,5 @@
 # Personal Setup for macOS
-## Basic Settings/Setup
-- Download Google Chrome at [website](https://www.google.com/chrome/)
-  - Set as default browser
+## Basic Settings/Setup - Download Google Chrome at [website](https://www.google.com/chrome/) Set as default browser
   - Sign in to Chrome user accounts
 - Dock
   - Remove: System Preferences (accessible from top-left logo anyway), Safari, Mail, Maps, Contacts, Photos, Reminders, iTunes, Podcasts, AppleTV, News, and App Store
@@ -22,6 +20,10 @@
 - Spotlight
   - Uncheck: Fonts, Images, Documents
 - Download Github Desktop [website](https://desktop.github.com/)
+- Messages
+    - turn off sounds and notification center
+- Mail
+    - Apple mail - turn off noises
 - Command line tools: ```xcode-select --install```
 - Install homebrew ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"``` [website](https://brew.sh/)
   - ```brew doctor``` to make sure install was successful
@@ -36,6 +38,7 @@
 - ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"``` for oh-my-zsh
 - ```ZSH_DISABLE_COMPFIX=true``` in zshrc BEFORE oh-my-zsh is sourced then update
   - ```upgrade_oh_my_zsh```
+- Disable ZSH noises (see .zshrc source)
   - resolves permission issues as per [this](https://github.com/ohmyzsh/ohmyzsh/issues/6835)
 - Spotify: ```brew cask install spotify```
   - move to Dock
@@ -88,8 +91,21 @@ fi
 - use this for .tmux.conf to incorporate vim [here](https://github.com/dduan/dotfiles/blob/master/.tmux.conf)
 - to source the file, go into tmux and reach command prompt (via ```C-b :```) and type ```source-file ~/.tmux.conf```
 
+## LSP
+- check if python in nvim w/ ```:echo has('python3')```
+- to add python in nvim: ```python3 -m pip install pynvim``` then ```let g:python3_host_prof = 'path to python3'```
+    - path to python3 can be found by running ```type -a python3```
+-
 ## TODO
 - git config - fancier
 - git ignore - detailed
 - Node (npm)
 - Check if anaconda environment will run tensorflow macos file 
+- LSP + autocompletion
+- C++
+- Java Installation
+- Latex, vim-latex
+- Airmail/Polymail/smth
+- Notebooks (app)
+- Alfred for Mac
+

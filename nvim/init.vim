@@ -28,6 +28,13 @@ set ruler
 " allow (normal) backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" tab settings
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set expandtab
+set smarttab
+
 " Automatic indentation is good
 set autoindent
 
@@ -53,6 +60,9 @@ vnoremap <silent> jk <esc>:set timeoutlen=500<cr>
 " In many terminal emulators the mouse works just fine, thus enable it.
 set mouse=a
 
+"Column limits
+set textwidth=110
+
 " python3
 let g:python3_host_prog = '/usr/local/bin/python3'
 
@@ -65,3 +75,5 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " enable ncm2 for all buffers
 " autocmd BufEnter * call ncm2#enable_for_buffer()
 " set completeopt=noinsert,menuone,noselect
+
+
