@@ -60,9 +60,9 @@
 - add to .zshrc 
 ```if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
-fi```
-- ```curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim``` to download vimplug
+fi
+```
+- ```curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim``` to download vimplug
 - look at init.vim file for neovim setup (has brief documentation as well)
   - note ```:so %``` inside nvim sources init.vim file
 
