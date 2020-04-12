@@ -27,6 +27,7 @@
 - Install homebrew ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"``` [website](https://brew.sh/)
   - ```brew doctor``` to make sure install was successful
 - ```brew install git``` 
+  - a good read for git [here] (https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 - iTerm2: ```brew cask install iterm2```
   - add to Dock
 - ```git config --global user.name "kvenkatesh5"``` - ```git config --global user.email "..."```
@@ -77,9 +78,15 @@ fi
 - look at init.vim file for neovim setup (has brief documentation as well)
   - note ```:so %``` inside nvim sources init.vim file
 
+## vim-tmux integration
+- ```brew install tmux```
+- add tmux plugin to zshrc
+- basics learned [here](https://www.youtube.com/watch?v=BHhA_ZKjyxo&t=514s) and [here](https://www.youtube.com/watch?v=norO25P7xHg)
+
 
 ## TODO
 - git config - fancier
 - git ignore - detailed
 - Node (npm)
 - Check if anaconda environment will run tensorflow 
+- macos file

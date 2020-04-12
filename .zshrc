@@ -27,6 +27,11 @@ POWERLEVEL9K_MODE="awesome-patched"
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
+# Disable all noises
+unsetopt BEEP
+# Disable autocomplete noises
+# unsetopt LIST_BEEP
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -79,7 +84,8 @@ POWERLEVEL9K_MODE="awesome-patched"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions tmux)
+# plugins=(git zsh-autosuggestions)
 
 ZSH_DISABLE_COMPFIX=true # ignores permission issues and loads completion normally
 source $ZSH/oh-my-zsh.sh

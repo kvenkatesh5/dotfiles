@@ -3,6 +3,7 @@ let mapleader = ";"
 
 call plug#begin('~/.config/nvim/plugins')
 Plug 'scrooloose/nerdtree' " file management
+Plug 'vim-airline/vim-airline' " status bar
 
 " Initialize plugin system
 call plug#end()
