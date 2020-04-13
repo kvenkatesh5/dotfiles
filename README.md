@@ -95,6 +95,12 @@ fi
 - to add python in nvim: ```python3 -m pip install pynvim``` then ```let g:python3_host_prof = 'path to python3'```
     - path to python3 can be found by running ```type -a python3```
 -
+
+## Conda and Tensorflow
+- ```pyenv shell anaconda...``` switch into version of anaconda we previously installed
+- ```conda create -n ml python=3.6.5 tensorflow numpy scikit-learn pandas``` create conda environment named ml
+  with downgraded python and tensorflow
+
 ## TODO
 - git config - fancier
 - git ignore - detailed

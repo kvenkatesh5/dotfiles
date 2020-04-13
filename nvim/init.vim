@@ -57,8 +57,9 @@ cmap W w
 inoremap <silent> jk <esc>:set timeoutlen=500<cr>
 vnoremap <silent> jk <esc>:set timeoutlen=500<cr>
 
-" In many terminal emulators the mouse works just fine, thus enable it.
-set mouse=a
+" For now, I don't like the mouse in vim
+"set mouse=a
+set mouse=
 
 "Column limits
 set textwidth=110
@@ -76,4 +77,5 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " autocmd BufEnter * call ncm2#enable_for_buffer()
 " set completeopt=noinsert,menuone,noselect
 
-
+" Wkspace read off template
+autocmd BufNewFile ~/wkspace/*.cpp 0r ~/wkspace/template.cpp
