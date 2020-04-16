@@ -4,9 +4,11 @@
 - Dock
   - Remove: System Preferences (accessible from top-left logo anyway), Safari, Mail, Maps, Contacts, Photos, Reminders, iTunes, Podcasts, AppleTV, News, and App Store Remember that these are accessible via ```Cmd + [space]``` (spotlight search)
   - In System Preferences, set automatic hide and show
+  - In System Preferences, uncheck "show previous apps"
 - Keyboard
   - Key Repeat = Fast Delay Until Repeat = Short
   - Turn off backlight after 10 seconds of inactivity
+  - Modifier Keys: Caps Lock --> Control (makes tmux life SO much easier)
 - Trackpad
   - Tap to Click = On (feels nicer)
   - Uncheck Smart Zoom and Rotate (Scroll & Zoom tab)
@@ -16,6 +18,10 @@
 - Menubar
   - Show Bluetooth in menubar
   - Show battery % in menubar
+  - Auto hide and show menu bar
+- General
+  - Set highlight color to red
+  - Scroll bar: always
 - Spotlight
   - Uncheck: Fonts, Images, Documents
 - Download Github Desktop [website](https://desktop.github.com/)
@@ -23,6 +29,9 @@
     - turn off sounds and notification center
 - Mail
     - Apple mail - turn off noises
+- Outlook
+    - Make as primary email client (have to go to apple mail for that)
+    - Disable sounds
 - Command line tools: ```xcode-select --install```
 - Install homebrew ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"``` [website](https://brew.sh/)
   - ```brew doctor``` to make sure install was successful
@@ -51,7 +60,7 @@
 
 ## iterm2 customization
 - make a new iterm2 profile for following customizations
-- solarized color in iterm2
+- solarized dark color in iterm2
 - follow instructions [here](https://gist.github.com/kevin-smets/8568070)
 - download source code pro + font awesome
 - use powerline10k as instructed [here](https://gist.github.com/kevin-smets/8568070)
@@ -100,6 +109,13 @@ fi
 - ```pyenv shell anaconda...``` switch into version of anaconda we previously installed
 - ```conda create -n ml python=3.6.5 tensorflow numpy scikit-learn pandas``` create conda environment named ml
   with downgraded python and tensorflow
+
+## Latex
+- ```brew cask install basictex```
+   - The alternate option is ```mactex``` but I want to use vim as my editor so I don't need all the extra
+     stuff (latex ide, etc.) that this installs
+- when missing a package (say for example, missing ```hyphenat.sty```), run ```sudo tlmgr install hyphenat```
+  or whatever package it is in particular, tlmgr is texlive manager
 
 ## TODO
 - git config - fancier
