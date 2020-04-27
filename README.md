@@ -56,7 +56,8 @@
 - ```pyenv install anaconda3-5.3.1``` for scientific computing
   - ```pyenv shell anaconda3-5.3.1``` switch into anaconda
   - ```conda install jupyter``` to allow for jupyter notebook
--
+- install Lastpass
+- install Zoom
 
 ## iterm2 customization
 - make a new iterm2 profile for following customizations
@@ -105,10 +106,37 @@ fi
     - path to python3 can be found by running ```type -a python3```
 -
 
-## Conda and Tensorflow
-- ```pyenv shell anaconda...``` switch into version of anaconda we previously installed
-- ```conda create -n ml python=3.6.5 tensorflow numpy scikit-learn pandas``` create conda environment named ml
-  with downgraded python and tensorflow
+## Conda and Pytorch
+- ```pyenv install anaconda3-5.3.1 ```
+- to zshrc, add this for pyenv ```if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi```
+- to work in anaconda, use ```pyenv global anaconda...```
+    - now ```conda``` should be an available command
+- make a conda environment for machine learning / deep learning
+- add this to .zshrc: (\# should rlly be #)
+
+\# >>> conda initialize >>>
+\# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/kesavan/.pyenv/versions/anaconda3-5.3.1/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/kesavan/.pyenv/versions/anaconda3-5.3.1/etc/profile.d/conda.sh" ]; then
+        . "/Users/kesavan/.pyenv/versions/anaconda3-5.3.1/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/kesavan/.pyenv/versions/anaconda3-5.3.1/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+\# <<< conda initialize <<<
+- (do this by running ```conda init zsh```)
+- source the file
+- now conda activate will work
+- activate ml environment and run ```conda install pytorch torchvision -c pytorch```
+- if when opening jupyter notebook, pytorch is unavailable then: ```conda install jupyter```
+- install additionally ```pandas matplotlib```
+- conda list is useful to check what environment has installed
+- BUG: at the moment, in a new tmux session, I cannot run ```conda activate ml```. must be done in regular
+  shell
 
 ## Latex
 - ```brew cask install basictex```
@@ -117,6 +145,12 @@ fi
 - when missing a package (say for example, missing ```hyphenat.sty```), run ```sudo tlmgr install hyphenat```
   or whatever package it is in particular, tlmgr is texlive manager
 
+## R
+- ```brew cask install xquartz```
+- install R and Rstudio from internet
+
+## Java
+- https://www.oracle.com/java/technologies/javase-downloads.html
 ## TODO
 - git config - fancier
 - git ignore - detailed

@@ -1,16 +1,18 @@
 " map leader
 let mapleader = ";" 
 call plug#begin('~/.config/nvim/plugins')
-Plug 'scrooloose/nerdtree' " file management
-Plug 'vim-airline/vim-airline' " status bar
-Plug 'christoomey/vim-tmux-navigator' " tmux integration
+" file management (see hotkey for toggle)
+Plug 'scrooloose/nerdtree' 
+" status bar
+Plug 'vim-airline/vim-airline' 
+" tmux integration
+Plug 'christoomey/vim-tmux-navigator' 
 " Auto close parens, braces, brackets, etc
 Plug 'jiangmiao/auto-pairs'
 " Convenience for commenting things in and out
 Plug 'scrooloose/nerdcommenter'
 " deus colorscheme
 Plug 'ajmwagar/vim-deus' 
-" LSP + autocomplete
 
 " Initialize plugin system
 call plug#end()
@@ -91,7 +93,7 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Wkspace read off template
 autocmd BufNewFile ~/wkspace/*.cpp 0r ~/wkspace/template.cpp
-"c++ makeprg
+"c++/python makeprg
 autocmd FileType c         set makeprg=gcc\ -Wall\ -O2
 autocmd FileType cpp       set makeprg=g++\ -std=c++11\ -Wall\ -O2
 autocmd FileType python    set makeprg=python3
