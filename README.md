@@ -58,6 +58,7 @@
   - ```conda install jupyter``` to allow for jupyter notebook
 - install Lastpass
 - install Zoom
+- remove launchpad from Dock, it is just a hotkey away (f4 (not with fn))
 
 ## iterm2 customization
 - make a new iterm2 profile for following customizations
@@ -151,6 +152,26 @@ unset __conda_setup
 
 ## Java
 - https://www.oracle.com/java/technologies/javase-downloads.html
+
+## Leetcode
+- https://github.com/ianding1/leetcode.vim
+
+## vimtex
+- https://github.com/lervag/vimtex
+- ```pip3 install neovim-remote```
+- Plug vimtex
+- Change zshrc alias to ```vim=nvim --listen VIM``` due to https://github.com/lervag/vimtex/issues/1296
+- ```sudo tlmgr install latexmk```
+
+
+## Jetbrains
+- Get the jetbrains suite using a college email!
+- Download ideavim plugin and enable it
+- Write .ideavimrc
+- Inside editor, hit : and write source ~/.ideavimrc to source the file
+- Update Ctrl+R command to be IDE not vim
+- Make sure to change codestyle
+
 ## TODO
 - git config - fancier
 - git ignore - detailed
@@ -164,4 +185,5 @@ unset __conda_setup
 - Notebooks (app)
 - Alfred for Mac
 - Fix colors from Apple Accessibility
+- symlink and ideamvimrc from dotfiles, setup .ideavimrc
 

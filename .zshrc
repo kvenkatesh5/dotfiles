@@ -119,7 +119,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 if type nvim > /dev/null 2>&1; then
-  alias vim='nvim'
+  #alias vim='nvim'
+  alias vim='nvim --listen VIM'
 fi
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi

@@ -13,6 +13,10 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 " deus colorscheme
 Plug 'ajmwagar/vim-deus' 
+" vimtex
+Plug 'lervag/vimtex'
+" c++ highlighting
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 " Initialize plugin system
 call plug#end()
@@ -22,6 +26,10 @@ set number
 
 " highlight the line the cursor is on.
 set cursorline
+
+" search settings
+set incsearch hlsearch
+set ignorecase smartcase
 
 " show cursor position at all times
 set ruler
@@ -111,4 +119,17 @@ function! CompileAndRun()
       exec '!rm ./a.out'
   endif
 endfunction
-nnoremap <leader>b :call CompileAndRun()<CR>
+" nnoremap <leader>b :call CompileAndRun()<CR>
+nnoremap <C-r> :call CompileAndRun()<CR>
+
+" vimtex
+let g:tex_flavor='latex'
+
+" nerdcommenter
+let g:NERDSpaceDelims=1
+
+" c++ highlighting
+let g:cpp_class_scope_highlight=1
+let g:cpp_member_variable_highlight=1
+
+
