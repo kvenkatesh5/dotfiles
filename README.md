@@ -49,6 +49,13 @@
 - install Zoom
 - remove launchpad from Dock, it is just a hotkey away (f4 (not with fn))
 - ./.macos file (see [https://github.com/mathiasbynens/dotfiles])
+  - read [this](https://stackoverflow.com/questions/53229221/terminal-error-zsh-permission-denied-startup-sh)
+  - maybe try this out with a harmless bash script just to make sure we know what we are doing
+  - add this ./.macos script to the dotfiles directory and comment out commands either don't know or don't need
+  - cd and then make symlink to file in home
+  - go to dotfiles and change permission of original file (in dotfiles directory) via ```chmod +x ./.macos```
+  - go to home and run the file ```./.macos```
+ 
 
 
 ## pyenv
