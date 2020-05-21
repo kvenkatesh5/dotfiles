@@ -18,20 +18,15 @@
 - Menubar
   - Show Bluetooth in menubar
   - Show battery % in menubar
-  - Auto hide and show menu bar
 - General
-  - Set highlight color to red
+  - Set accent/highlight color to red
   - Scroll bar: always
 - Spotlight
   - Uncheck: Fonts, Images, Documents
-- Download Github Desktop [website](https://desktop.github.com/)
 - Messages
     - turn off sounds and notification center
 - Mail
-    - Apple mail - turn off noises
-- Outlook
-    - Make as primary email client (have to go to apple mail for that)
-    - Disable sounds
+    - Apple mail - primary
 - Command line tools: ```xcode-select --install```
 - Install homebrew ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"``` [website](https://brew.sh/)
   - ```brew doctor``` to make sure install was successful
@@ -181,7 +176,6 @@ unset __conda_setup
 - C++
 - Java Installation
 - Latex, vim-latex
-- Airmail/Polymail/smth
 - Notebooks (app)
 - Alfred for Mac
 - Fix colors from Apple Accessibility
