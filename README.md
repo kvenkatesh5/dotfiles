@@ -57,26 +57,6 @@
   - go to home and run the file ```./.macos```
  
 
-
-## pyenv
-- ```brew install pyenv``` and ```brew install openssl readline sqlite3 xz zlib``` for dependecies on mac
-  - add ```if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi``` to .zshrc (if bash, use bash_profile), credit for this is [nicolashery](https://github.com/nicolashery/mac-dev-setup#iterm2) and [wiki](https://github.com/pyenv/pyenv/wiki)
-- ```pyenv install 3.6.10``` for purposes of tensorflow
-- ```pyenv install anaconda3-5.3.1``` for scientific computing
-  - ```pyenv shell anaconda3-5.3.1``` switch into anaconda
-  - ```conda install jupyter``` to allow for jupyter notebook
-  
-  
-## iterm2 customization
-- make a new iterm2 profile for following customizations
-- solarized dark color in iterm2
-- follow instructions [here](https://gist.github.com/kevin-smets/8568070)
-- download source code pro + font awesome
-- use powerline10k as instructed [here](https://gist.github.com/kevin-smets/8568070)
-- enable instant prompt warnings
-- enable autosuggestions as instructed [here](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh) (towards bottom of page)
-- 
-
 ## Dotfile management
 - ```ln -s``` creates symbolic link, ```-v``` makes it verbose
 - ```mv ~/.gitconfig ~/dotfiles/.gitconfig```
@@ -101,6 +81,7 @@ fi
 ## vim-tmux integration
 - ```brew install tmux```
 - add tmux plugin to zshrc
+    - see [here](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/tmux)
 - basics learned [here](https://www.youtube.com/watch?v=BHhA_ZKjyxo&t=514s) and [here](https://www.youtube.com/watch?v=norO25P7xHg)
 - check out the hotkeys in [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/tmux)
 - plug 'christoomey/vim-tmux-navigator' in init.vim
@@ -113,38 +94,6 @@ fi
 - to add python in nvim: ```python3 -m pip install pynvim``` then ```let g:python3_host_prof = 'path to python3'```
     - path to python3 can be found by running ```type -a python3```
 -
-
-## Conda and Pytorch
-- ```pyenv install anaconda3-5.3.1 ```
-- to zshrc, add this for pyenv ```if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi```
-- to work in anaconda, use ```pyenv global anaconda...```
-    - now ```conda``` should be an available command
-- make a conda environment for machine learning / deep learning
-- add this to .zshrc: (\# should rlly be #)
-
-\# >>> conda initialize >>>
-\# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/kesavan/.pyenv/versions/anaconda3-5.3.1/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/kesavan/.pyenv/versions/anaconda3-5.3.1/etc/profile.d/conda.sh" ]; then
-        . "/Users/kesavan/.pyenv/versions/anaconda3-5.3.1/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/kesavan/.pyenv/versions/anaconda3-5.3.1/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-\# <<< conda initialize <<<
-- (do this by running ```conda init zsh```)
-- source the file
-- now conda activate will work
-- activate ml environment and run ```conda install pytorch torchvision -c pytorch```
-- if when opening jupyter notebook, pytorch is unavailable then: ```conda install jupyter```
-- install additionally ```pandas matplotlib```
-- conda list is useful to check what environment has installed
-- BUG: at the moment, in a new tmux session, I cannot run ```conda activate ml```. must be done in regular
-  shell
 
 ## Latex
 - ```brew cask install basictex```
@@ -178,6 +127,31 @@ unset __conda_setup
 - Inside editor, hit : and write source ~/.ideavimrc to source the file
 - Update Ctrl+R command to be IDE not vim
 - Make sure to change codestyle
+- Not sure if I like vim in Jetbrains; I think if you want vim, just use vim!
+
+## MacVim for C++ competitive programming
+- CONCEPT: MacVim uses vim, I have set up terminal to use neovim
+- continue to use vimplug, but run the vim command given on https://github.com/junegunn/vim-plug
+- also, start switching to jj escape rather than jk escape
+- the defaults written in using the .macos script still maintain
+- symlink a .gvimrc file
+- set in System Preferences that function keys have standard functionality (helpful for building/running files)
+- set a gvimrc.custom.after to take care of reset gui variables
+
+# Setting up Conda & Tensorflow (updated version):
+- Resources:
+    - https://www.youtube.com/watch?v=MpUvdLD932c
+    - https://queirozf.com/entries/jupyter-kernels-how-to-add-change-remove
+- follow Heaton's tutorial to setup Tensorflow (if Tensorflow updates, expect that the video will update
+  also)
+
+
+
+## Misc Apps
+- Messenger for Mac
+- Whatsapp for Mac
+- Slack for Mac
+- Firefox Developer Edition
 
 ## TODO
 - git config - fancier
