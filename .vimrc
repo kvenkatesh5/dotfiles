@@ -24,9 +24,13 @@ call plug#end()
 
 set termguicolors
 "colorscheme solarized8_light_high
-colorscheme Tomorrow-Night-Blue
-
-" backups and swap files
+"colorscheme Tomorrow-Night-Blue
+"colorscheme cobalt
+"colorscheme elrond
+colorscheme rainbow_fruit
+"
+"
+"" backups and swap files
 set noswapfile
 set nowritebackup
 set nobackup
@@ -56,7 +60,7 @@ set backspace=indent,eol,start
 " tab settings
 set shiftwidth=4
 set tabstop=4
-set softtabstop=0
+set softtabstop=4
 set expandtab
 
 " auto indentation
@@ -106,6 +110,30 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 
 " competitive programming -- C++ configs
-nnoremap<F5> :!g++ % -std=c++17<CR>|"Press Func.5 to Compile File
-nnoremap<F6> :!./a.out < inputf.in<CR>|"Press Func.6 to Run File with input
+"nnoremap<F5> :!g++ % -std=c++17<CR>|"Press Func.5 to Compile File
+"nnoremap<F6> :!./a.out < inputf.in<CR>|"Press Func.6 to Run File with input
 
+" c++ makeprg and compile/run configs (made for competititve programming purposes)
+autocmd FileType cpp set makeprg=g++\ -std=c++17\ -O2
+function! CompileAndRunWithInput()
+    write
+    silent! make %
+    redraw!
+    cwindow
+    if len(getqflist()) == 0
+        exec '!time ./a.out < inputf.txt'
+    endif
+endfunction
+nnoremap<F5> :call CompileAndRunWithInput()<CR>
+
+
+function! CompileAndRunWithInputOuput()
+    write
+    silent! make %
+    redraw!
+    cwindow
+    if len(getqflist()) == 0
+        exec '!time ./a.out < inputf.txt > outputf.txt'
+    endif
+endfunction
+nnoremap<F6> :call CompileAndRunWithInput()<CR>
