@@ -31,6 +31,7 @@
 - Install homebrew ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"``` [website](https://brew.sh/)
   - ```brew doctor``` to make sure install was successful
 - ```brew install git``` 
+- ```brew install node```
   - a good read for git [here] (https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 - iTerm2: ```brew cask install iterm2```
   - add to Dock
@@ -138,10 +139,12 @@ fi
 - set in System Preferences that function keys have standard functionality (helpful for building/running files)
 - set a gvimrc.custom.after to take care of reset gui variables
 
-# Setting up Conda & Tensorflow (updated version):
+## Setting up Conda & Tensorflow (updated version):
 - Resources:
     - https://www.youtube.com/watch?v=MpUvdLD932c
     - https://queirozf.com/entries/jupyter-kernels-how-to-add-change-remove
+    - to create a conda environment from a yml script: ```conda env create -v -f name-here.yml```
+    - to add environment kernel to jupyter ```python -m ipykernel install --user --name tensorflow --display-name "Python 3.7 (tensorflow)"```
 - follow Heaton's tutorial to setup Tensorflow (if Tensorflow updates, expect that the video will update
   also)
 
@@ -153,6 +156,9 @@ fi
 - Slack for Mac
 - Firefox Developer Edition
 
+## Fonts
+- https://github.com/Homebrew/homebrew-cask-fonts
+- Do that
 ## TODO
 - git config - fancier
 - git ignore - detailed
