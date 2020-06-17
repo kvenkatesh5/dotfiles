@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -15,11 +8,9 @@ export ZSH="/Users/kesavan/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 # ZSH_THEME="agnoster"
 # ZSH_THEME="afowler"
-ZSH_THEME="powerlevel10k/powerlevel10k"
-POWERLEVEL9K_MODE="awesome-patched"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -84,8 +75,7 @@ unsetopt BEEP
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions tmux)
-# plugins=(git zsh-autosuggestions)
+plugins=(git tmux)
 
 ZSH_DISABLE_COMPFIX=true # ignores permission issues and loads completion normally
 source $ZSH/oh-my-zsh.sh
@@ -119,25 +109,19 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 if type nvim > /dev/null 2>&1; then
-  #alias vim='nvim'
-  alias vim='nvim --listen VIM'
+	alias vim='nvim'
 fi
-# pyenv
-if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/kesavan/.pyenv/versions/anaconda3-5.3.1/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/kesavan/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/kesavan/.pyenv/versions/anaconda3-5.3.1/etc/profile.d/conda.sh" ]; then
-        . "/Users/kesavan/.pyenv/versions/anaconda3-5.3.1/etc/profile.d/conda.sh"
+    if [ -f "/Users/kesavan/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/kesavan/opt/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/kesavan/.pyenv/versions/anaconda3-5.3.1/bin:$PATH"
+        export PATH="/Users/kesavan/opt/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
