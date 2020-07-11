@@ -148,6 +148,8 @@ fi
 - follow Heaton's tutorial to setup Tensorflow (if Tensorflow updates, expect that the video will update
   also)
 
+## iTerm (guake style) dropdown terminal
+- open at login, hide from cmd+t, hotkey currently using is SHFT+CRTL (remember =caps lock!) + T
 
 
 ## Misc Apps
@@ -155,10 +157,15 @@ fi
 - Whatsapp for Mac
 - Slack for Mac
 - Firefox Developer Edition
+- KeyKey app (to improve typing speed)
+- Geany for editing
+- PdfExpert pro
+- Spark mail client (open at login)
 
 ## Fonts
 - https://github.com/Homebrew/homebrew-cask-fonts
 - Do that
+- Classic Console, Terminus TTF (nice for competitive programming, macvim)
 ## TODO
 - git config - fancier
 - git ignore - detailed

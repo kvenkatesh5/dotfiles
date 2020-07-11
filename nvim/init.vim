@@ -127,4 +127,3 @@ function! CompileJava()
     silent! make
 endfunction
 nnoremap<F7> :call CompileJava()<CR>
-

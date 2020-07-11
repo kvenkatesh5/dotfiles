@@ -48,6 +48,7 @@ endif
 
 " `before/after` Pattern inspired by Janus/spf-13
 if filereadable(expand("~/.vim/gvimrc.custom.after"))
+    " this file contains macvim specific configurations laid ontop of .vimrc
   source ~/.vim/gvimrc.custom.after
 endif
 

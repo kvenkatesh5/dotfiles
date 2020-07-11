@@ -1,0 +1,13 @@
+" GUI
+autocmd! GUIEnter * set vb t_vb=
+"keep window size while zooming in
+set guioptions+=k
+" set font/screen size in gvim
+" for Classic Console
+set guifont=Classic\ Console:h23
+set lines=55 columns=120
+
+" colorscheme options that look nice for Macvim
+colorscheme aurora
+"colorscheme LightDefaultGrey
+

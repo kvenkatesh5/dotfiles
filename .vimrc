@@ -7,52 +7,44 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin()
-" colorschemes
+if !exists("*ReloadConfigs")
+  function ReloadConfigs()
+      :source ~/.vimrc
+      if has("gui_running")
+          :source ~/.gvimrc
+      endif
+  endfunction
+  command! Recfg call ReloadConfigs()
+endif
+
+
+call plug#begin() " colorschemes
 Plug 'flazz/vim-colorschemes'
-" file management (see hotkey for toggle)
-Plug 'scrooloose/nerdtree' 
-" tmux integration
-Plug 'christoomey/vim-tmux-navigator' 
-" Auto close parens, braces, brackets, etc
-Plug 'jiangmiao/auto-pairs'
-" Convenience for commenting things in and out
-Plug 'preservim/nerdcommenter'
-" Ayu Light Theme
-Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
 set termguicolors
-"colorscheme solarized8_light_high
-"colorscheme Tomorrow-Night-Blue
-"colorscheme cobalt
-"colorscheme elrond
-colorscheme rainbow_fruit
-"
-"
+
+" search settings
+set hls
+set incsearch 
+set nospell
+set ignorecase smartcase
+
 "" backups and swap files
 set noswapfile
 set nowritebackup
 set nobackup
 
-" number
-set number
-set rnu
-
-" highlight the line the cursor is on
-"set cursorline
-
-" search settings
-set incsearch 
-"set hlsearch
-"nnoremap <space> :noh<cr>
-"set hlsearch!
-"nnoremap <C-f> :set hlsearch!<CR>
-set nospell
-set ignorecase smartcase
-
 " show cursor position at all times
 set ruler
+
+" number
+set number
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set rnu
+    autocmd BufLeave,FocusLost,InsertEnter * set nornu
+augroup END
 
 " allow (normal) backspacing over everything
 set backspace=indent,eol,start
@@ -65,12 +57,6 @@ set expandtab
 
 " auto indentation
 set autoindent
-
-" fold method
-"set foldmethod=indent
-"set foldlevel=99
-"nnoremap <space> za
-
 
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
@@ -94,46 +80,24 @@ vnoremap <silent> jj <esc>:set timeoutlen=500<cr>
 
 " scroll (keep 5 line margins)
 set sidescrolloff=5
-set scrolloff=5
+set scrolloff=3
 
-" I don't like the mouse in vim (alternate is 'set mouse=a')
+" set mouse
 set mousehide 
-set mouse=
+set mouse=a
 
-" column limits
-set textwidth=110
+" brackets
+inoremap { {}<Left>
+inoremap {<CR> {<CR>}<Esc>O
+inoremap {{ {
+inoremap {} {}
 
-" toggle NerdTree (using leader + n, alternate choice is leader + a)
-nnoremap <leader>n :NERDTreeToggle<cr>
-" close vim if the last window is NerdTree
-autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" cd into competitive programming workspace
+cd ~/wkspace/src/
 
-
-" competitive programming -- C++ configs
-"nnoremap<F5> :!g++ % -std=c++17<CR>|"Press Func.5 to Compile File
-"nnoremap<F6> :!./a.out < inputf.in<CR>|"Press Func.6 to Run File with input
-
-" c++ makeprg and compile/run configs (made for competititve programming purposes)
-autocmd FileType cpp set makeprg=g++\ -std=c++17\ -O2
-function! CompileAndRunWithInput()
-    write
-    silent! make %
-    redraw!
-    cwindow
-    if len(getqflist()) == 0
-        exec '!time ./a.out < inputf.txt'
-    endif
-endfunction
-nnoremap<F5> :call CompileAndRunWithInput()<CR>
+" c++ compilation and run
+autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -Wshadow -Wall -o %:r<CR>
+autocmd filetype cpp nnoremap <F10> :!%:r<CR>
+autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR> $
 
 
-function! CompileAndRunWithInputOuput()
-    write
-    silent! make %
-    redraw!
-    cwindow
-    if len(getqflist()) == 0
-        exec '!time ./a.out < inputf.txt > outputf.txt'
-    endif
-endfunction
-nnoremap<F6> :call CompileAndRunWithInput()<CR>
