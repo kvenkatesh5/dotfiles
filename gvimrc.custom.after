@@ -1,3 +1,9 @@
+" brackets
+"inoremap { {}<Left>
+"inoremap {<CR> {<CR>}<Esc>O
+"inoremap {{ {
+"inoremap {} {}
+
 " GUI
 autocmd! GUIEnter * set vb t_vb=
 "keep window size while zooming in
@@ -7,7 +13,17 @@ set guioptions+=k
 set guifont=Classic\ Console:h23
 set lines=55 columns=120
 
-" colorscheme options that look nice for Macvim
-colorscheme aurora
+
+" colorscheme options that look nice for Macvim, requires flazz vim colorschemes plugin
+set termguicolors
+"colorscheme aurora
 "colorscheme LightDefaultGrey
 
+"directory for cp
+cd ~/wkspace/src/
+
+" c++ compilation and run
+"autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -Wshadow -Wall -o %:r<CR>
+autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -o %:r<CR>
+autocmd filetype cpp nnoremap <F10> :!%:r<CR>
+autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR> $

@@ -1,16 +1,14 @@
 " map leader
 let mapleader = ";"
 
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+filetype plugin indent on
+syntax enable
 
 if !exists("*ReloadConfigs")
   function ReloadConfigs()
       :source ~/.vimrc
       if has("gui_running")
+          :source ~/.vimrc
           :source ~/.gvimrc
       endif
   endfunction
@@ -18,11 +16,8 @@ if !exists("*ReloadConfigs")
 endif
 
 
-call plug#begin() " colorschemes
-Plug 'flazz/vim-colorschemes'
-call plug#end()
-
-set termguicolors
+colorscheme zellner
+"colorscheme default
 
 " search settings
 set hls
@@ -85,19 +80,5 @@ set scrolloff=3
 " set mouse
 set mousehide 
 set mouse=a
-
-" brackets
-inoremap { {}<Left>
-inoremap {<CR> {<CR>}<Esc>O
-inoremap {{ {
-inoremap {} {}
-
-" cd into competitive programming workspace
-cd ~/wkspace/src/
-
-" c++ compilation and run
-autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -Wshadow -Wall -o %:r<CR>
-autocmd filetype cpp nnoremap <F10> :!%:r<CR>
-autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR> $
 
 

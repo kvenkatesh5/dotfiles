@@ -127,3 +127,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# path for opt
+export PATH=/Users/kesavan/opt/prince/bin:$PATH

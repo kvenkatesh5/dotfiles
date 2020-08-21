@@ -138,6 +138,7 @@ fi
 - symlink a .gvimrc file
 - set in System Preferences that function keys have standard functionality (helpful for building/running files)
 - set a gvimrc.custom.after to take care of reset gui variables
+- set up bits/stdc.h -> https://github.com/tekfyl/bits-stdc-.h-for-mac
 
 ## Setting up Conda & Tensorflow (updated version):
 - Resources:
@@ -150,7 +151,13 @@ fi
 
 ## iTerm (guake style) dropdown terminal
 - open at login, hide from cmd+t, hotkey currently using is SHFT+CRTL (remember =caps lock!) + T
+- I think one idea is just to keep iterm hidden from cmd+tab, disable guake style dropdwon, but set ctrl+t hotkey toquickly open all windows
 
+## SSH JHU
+- Filezilla
+- to start up python, command ```module load python```, negative sign ahead of module load (ml)
+  removes it
+- to start up anaconda, ```ml anaconda```
 
 ## Misc Apps
 - Messenger for Mac
@@ -161,6 +168,18 @@ fi
 - Geany for editing
 - PdfExpert pro
 - Spark mail client (open at login)
+- Bartender 3
+- f.lux
+- Magnet Pro
+- Parallels
+- MATLAB (student license, university affiliated) - ```userpath('Users/kesavan/Matlab')```, since default is inside documents
+- Dropbox
+- Install princexml into /Users/kesavan/opt/prince, see link https://www.princexml.com/doc/10/installing/
+    - carefully add this directory /bin to your path (i added line in zshrc)
+
+# W/ Github Pro (Student Pack!)
+https://education.github.com/pack/offers?sort=popularity&tag=All
+- HazeOver (start at login) - free app license
 
 ## Fonts
 - https://github.com/Homebrew/homebrew-cask-fonts

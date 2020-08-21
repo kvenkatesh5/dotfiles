@@ -94,7 +94,7 @@ nnoremap <leader>n :NERDTreeToggle<cr>
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
-" c++ makeprg and compile/run configs (made for competititve programming purposes)
+" c++ makeprg and compile/run configs (currently not used)
 autocmd FileType cpp set makeprg=g++\ -std=c++17\ -O2
 function! CompileAndRunWithInput()
     write
@@ -107,17 +107,6 @@ function! CompileAndRunWithInput()
 endfunction
 nnoremap<F5> :call CompileAndRunWithInput()<CR>
 
-
-function! CompileAndRunWithInputOuput()
-    write
-    silent! make %
-    redraw!
-    cwindow
-    if len(getqflist()) == 0
-        exec '!time ./a.out < inputf.txt > outputf.txt'
-    endif
-endfunction
-nnoremap<F6> :call CompileAndRunWithInputOutput()<CR>
 
 " java makeprg and compile/run configs
 autocmd FileType java set makeprg=javac\ %
