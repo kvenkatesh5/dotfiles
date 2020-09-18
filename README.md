@@ -185,17 +185,40 @@ https://education.github.com/pack/offers?sort=popularity&tag=All
 - https://github.com/Homebrew/homebrew-cask-fonts
 - Do that
 - Classic Console, Terminus TTF (nice for competitive programming, macvim)
+
+## Dock
+- Before resetting, upload picture of the Dock here
+
 ## TODO
 - git config - fancier
 - git ignore - detailed
 - Node (npm)
 - Check if anaconda environment will run tensorflow macos file 
 - LSP + autocompletion
-- C++
-- Java Installation
 - Latex, vim-latex
 - Notebooks (app)
 - Alfred for Mac
 - Fix colors from Apple Accessibility
-- symlink and ideamvimrc from dotfiles, setup .ideavimrc
 
+## ML
+### Jeff Heaton instructions
+#### Environment Setup
+- To run code locally (via a Jupyter notebook), follow the instructions in this video by Jeff Heaton.
+  https://www.youtube.com/watch?v=MpUvdLD932c (macos version)
+
+#### Jupyter Git
+- to convert a jupyter notebook to python file, run 
+```jupyter nbconvert path-to-file --to="python" --output-dir="path-to-dir" --output="new-file-name"```
+
+
+
+## Some Potentially Useful Gists
+- [another dev setup README](https://gist.github.com/checkaayush/35e2e99885da14d25e0b806b3d543b46)
+- [sublime text 3 setup](https://gist.github.com/ijy/7399688)
+- [sublime text 3 build for C++](https://gist.github.com/jdhao/3e45ba9164fe3d27c40ea86b6455435f)
+- [simple vimrc for C++ files](https://gist.github.com/AkashRRao/aeabbc8db0eb1173ab3f70ba0e79c9de)
+- [Vscode settings](https://gist.github.com/alysivji/21f08de521f10f6803277a4e81972c5f)
+- [latex clean shell script](https://gist.github.com/djsutherland/266983)
+- [sample git config file](https://gist.github.com/pksunkara/988716)
+- [iterm2-solarized instructions](https://gist.github.com/kevin-smets/8568070)
+-
