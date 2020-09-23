@@ -1,18 +1,10 @@
 {
     "files.associations": {
-        "xiosbase": "cpp",
-        "xlocale": "cpp",
+        "ostream": "cpp",
         "vector": "cpp",
-        "xstring": "cpp",
-        "utility": "cpp",
-        "algorithm": "cpp",
-        "xutility": "cpp",
-        "cmath": "cpp",
-        "initializer_list": "cpp",
-        "type_traits": "cpp",
-        "xtree": "cpp",
-        "array": "cpp",
-        "valarray": "cpp",
-        "iostream": "cpp"
+        "queue": "cpp",
+        "iostream": "cpp",
+        "__hash_table": "cpp",
+        "unordered_map": "cpp"
     }
 }

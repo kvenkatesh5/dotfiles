@@ -1,36 +1,25 @@
 {
-    "version": "2.0.0",
-    "isShellCommand": true,
-    "showOutput": "always",
-    "args": [],
-    "tasks": [
-        {
-            "label": "build",
-            "command": "g++",
-            "isShellCommand": true,
-            "args": [
-                "-g",
-                "${fileBasename}",
-                "-o${fileBasenameNoExtension}",
-                "-std=c++14",
-                "-DKMPC"
-            ],
-            "showOutput": "always",
-            "isBuildCommand": true
-        },
-        {
-            "type": "shell",
-            "label": "g++ build active file",
-            "command": "/usr/bin/g++",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameoExtension}"
-            ],
-            "options": {
-                "cwd": "/usr/bin"
-            }
-        }
-    ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "shell: clang++ build active file",
+			"command": "/usr/bin/clang++",
+			"args": [
+				"-std=c++17",
+				"-stdlib=libc++",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build"
+		}
+	]
 }
