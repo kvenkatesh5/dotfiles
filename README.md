@@ -1,8 +1,9 @@
 # Personal Setup for macOS
-## Basic Settings/Setup - Download Google Chrome at [website](https://www.google.com/chrome/) Set as default browser
+## Basic Settings/Setup 
+- Download Google Chrome at [website](https://www.google.com/chrome/) Set as default browser
   - Sign in to Chrome user accounts
 - Dock
-  - Remove: System Preferences (accessible from top-left logo anyway), Safari, Mail, Maps, Contacts, Photos, Reminders, iTunes, Podcasts, AppleTV, News, and App Store Remember that these are accessible via ```Cmd + [space]``` (spotlight search)
+  - Remove: System Preferences (accessible from top-left logo anyway), Safari, Mail, Maps, Contacts, Photos, Reminders, iTunes, Podcasts, AppleTV, News, and App Store Remember that these are accessible via Cmd + (space) (spotlight search)
   - In System Preferences, set automatic hide and show
   - In System Preferences, uncheck "show previous apps"
 - Keyboard
@@ -26,7 +27,10 @@
 - Messages
     - turn off sounds and notification center
 - Mail
-    - Apple mail - primary
+    - Use either spark or outlook (since college email tied to msft)
+    - When you wish to switch primaries: change primary (through apple mail app), setup open at
+      login, set notification settings, consider tasks app change
+    - Apple mail - default primary
 - Command line tools: ```xcode-select --install```
 - Install homebrew ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"``` [website](https://brew.sh/)
   - ```brew doctor``` to make sure install was successful
@@ -56,6 +60,9 @@
   - cd and then make symlink to file in home
   - go to dotfiles and change permission of original file (in dotfiles directory) via ```chmod +x ./.macos```
   - go to home and run the file ```./.macos```
+- install Messenger, Whatsapp, Slack for mac
+- install f.lux for screen brightness management (a bit annoying but helps eyes)
+- install Firefox Developer Edition
  
 
 ## Dotfile management
@@ -90,18 +97,19 @@ fi
 - use this for .tmux.conf to incorporate vim [here](https://github.com/dduan/dotfiles/blob/master/.tmux.conf)
 - to source the file, go into tmux and reach command prompt (via ```C-b :```) and type ```source-file ~/.tmux.conf```
 
-## LSP
-- check if python in nvim w/ ```:echo has('python3')```
-- to add python in nvim: ```python3 -m pip install pynvim``` then ```let g:python3_host_prof = 'path to python3'```
-    - path to python3 can be found by running ```type -a python3```
--
-
 ## Latex
 - ```brew cask install basictex```
    - The alternate option is ```mactex``` but I want to use vim as my editor so I don't need all the extra
      stuff (latex ide, etc.) that this installs
 - when missing a package (say for example, missing ```hyphenat.sty```), run ```sudo tlmgr install hyphenat```
   or whatever package it is in particular, tlmgr is texlive manager
+### vimtex
+- https://github.com/lervag/vimtex
+- ```pip3 install neovim-remote```
+- Plug vimtex
+- Change zshrc alias to ```vim=nvim --listen VIM``` due to https://github.com/lervag/vimtex/issues/1296
+- ```sudo tlmgr install latexmk```
+
 
 ## R
 - ```brew cask install xquartz```
@@ -109,16 +117,6 @@ fi
 
 ## Java
 - https://www.oracle.com/java/technologies/javase-downloads.html
-
-## Leetcode
-- https://github.com/ianding1/leetcode.vim
-
-## vimtex
-- https://github.com/lervag/vimtex
-- ```pip3 install neovim-remote```
-- Plug vimtex
-- Change zshrc alias to ```vim=nvim --listen VIM``` due to https://github.com/lervag/vimtex/issues/1296
-- ```sudo tlmgr install latexmk```
 
 
 ## Jetbrains
@@ -159,35 +157,23 @@ fi
   removes it
 - to start up anaconda, ```ml anaconda```
 
+# Github Pro (Student Pack!)
+https://education.github.com/pack/offers?sort=popularity&tag=All
+- HazeOver is an option, but I didn't like it so much
+
+## Fonts
+- https://github.com/Homebrew/homebrew-cask-fonts
+- Classic Console, Terminus TTF (nice for competitive programming, macvim)
+
 ## Misc Apps
-- Messenger for Mac
-- Whatsapp for Mac
-- Slack for Mac
-- Firefox Developer Edition
-- KeyKey app (to improve typing speed)
 - Geany for editing
-- PdfExpert pro
-- Spark mail client (open at login)
 - Bartender 3
-- f.lux
 - Magnet Pro
 - Parallels
 - MATLAB (student license, university affiliated) - ```userpath('Users/kesavan/Matlab')```, since default is inside documents
 - Dropbox
 - Install princexml into /Users/kesavan/opt/prince, see link https://www.princexml.com/doc/10/installing/
     - carefully add this directory /bin to your path (i added line in zshrc)
-
-# W/ Github Pro (Student Pack!)
-https://education.github.com/pack/offers?sort=popularity&tag=All
-- HazeOver (start at login) - free app license
-
-## Fonts
-- https://github.com/Homebrew/homebrew-cask-fonts
-- Do that
-- Classic Console, Terminus TTF (nice for competitive programming, macvim)
-
-## Dock
-- Before resetting, upload picture of the Dock here
 
 ## TODO
 - git config - fancier
@@ -198,19 +184,6 @@ https://education.github.com/pack/offers?sort=popularity&tag=All
 - Latex, vim-latex
 - Notebooks (app)
 - Alfred for Mac
-- Fix colors from Apple Accessibility
-
-## ML
-### Jeff Heaton instructions
-#### Environment Setup
-- To run code locally (via a Jupyter notebook), follow the instructions in this video by Jeff Heaton.
-  https://www.youtube.com/watch?v=MpUvdLD932c (macos version)
-
-#### Jupyter Git
-- to convert a jupyter notebook to python file, run 
-```jupyter nbconvert path-to-file --to="python" --output-dir="path-to-dir" --output="new-file-name"```
-
-
 
 ## Some Potentially Useful Gists
 - [another dev setup README](https://gist.github.com/checkaayush/35e2e99885da14d25e0b806b3d543b46)

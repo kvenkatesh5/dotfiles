@@ -20,7 +20,7 @@ set termguicolors
 "colorscheme LightDefaultGrey
 
 "directory for cp
-cd ~/wkspace/src/
+cd ~/wkspace/
 
 " c++ compilation and run
 "autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -Wshadow -Wall -o %:r<CR>
