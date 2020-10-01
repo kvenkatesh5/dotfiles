@@ -27,7 +27,7 @@
 - Messages
     - turn off sounds and notification center
 - Mail
-    - Use either spark or outlook (since college email tied to msft)
+    - Use either spark (+ TickTick) or outlook (since college email tied to msft)
     - When you wish to switch primaries: change primary (through apple mail app), setup open at
       login, set notification settings, consider tasks app change
     - Apple mail - default primary
@@ -63,6 +63,8 @@
 - install Messenger, Whatsapp, Slack for mac
 - install f.lux for screen brightness management (a bit annoying but helps eyes)
 - install Firefox Developer Edition
+- install Geany as a potential tool for editing
+- instlal Dropbox
  
 
 ## Dotfile management
@@ -110,14 +112,12 @@ fi
 - Change zshrc alias to ```vim=nvim --listen VIM``` due to https://github.com/lervag/vimtex/issues/1296
 - ```sudo tlmgr install latexmk```
 
-
 ## R
 - ```brew cask install xquartz```
 - install R and Rstudio from internet
 
 ## Java
 - https://www.oracle.com/java/technologies/javase-downloads.html
-
 
 ## Jetbrains
 - Get the jetbrains suite using a college email!
@@ -151,13 +151,19 @@ fi
 - open at login, hide from cmd+t, hotkey currently using is SHFT+CRTL (remember =caps lock!) + T
 - I think one idea is just to keep iterm hidden from cmd+tab, disable guake style dropdwon, but set ctrl+t hotkey toquickly open all windows
 
-## SSH JHU
+## JHU
+### MARCC (SSH)
 - Filezilla
 - to start up python, command ```module load python```, negative sign ahead of module load (ml)
   removes it
 - to start up anaconda, ```ml anaconda```
+### Other Apps
+- Mathematica
+- Matlab
+    - MATLAB (student license, university affiliated) - ```userpath('Users/kesavan/Matlab')```, since default is inside documents
+- Zotero
 
-# Github Pro (Student Pack!)
+## Github Pro Student Pack
 https://education.github.com/pack/offers?sort=popularity&tag=All
 - HazeOver is an option, but I didn't like it so much
 
@@ -166,12 +172,9 @@ https://education.github.com/pack/offers?sort=popularity&tag=All
 - Classic Console, Terminus TTF (nice for competitive programming, macvim)
 
 ## Misc Apps
-- Geany for editing
 - Bartender 3
 - Magnet Pro
 - Parallels
-- MATLAB (student license, university affiliated) - ```userpath('Users/kesavan/Matlab')```, since default is inside documents
-- Dropbox
 - Install princexml into /Users/kesavan/opt/prince, see link https://www.princexml.com/doc/10/installing/
     - carefully add this directory /bin to your path (i added line in zshrc)
 
@@ -179,11 +182,7 @@ https://education.github.com/pack/offers?sort=popularity&tag=All
 - git config - fancier
 - git ignore - detailed
 - Node (npm)
-- Check if anaconda environment will run tensorflow macos file 
 - LSP + autocompletion
-- Latex, vim-latex
-- Notebooks (app)
-- Alfred for Mac
 
 ## Some Potentially Useful Gists
 - [another dev setup README](https://gist.github.com/checkaayush/35e2e99885da14d25e0b806b3d543b46)
