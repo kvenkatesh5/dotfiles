@@ -71,7 +71,8 @@ cmap W w
 
 " fast escape
 inoremap <silent> jj <esc>:set timeoutlen=500<cr>
-vnoremap <silent> jj <esc>:set timeoutlen=500<cr>
+" don't use mapping in visual mode
+"vnoremap <silent> jj <esc>:set timeoutlen=500<cr>
 
 " scroll (keep 5 line margins)
 set sidescrolloff=5

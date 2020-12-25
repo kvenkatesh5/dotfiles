@@ -75,7 +75,8 @@ cmap W w
 
 " fast escape
 inoremap <silent> jj <esc>:set timeoutlen=500<cr>
-vnoremap <silent> jj <esc>:set timeoutlen=500<cr>
+" don't use mapping in visual mode
+"vnoremap <silent> jj <esc>:set timeoutlen=500<cr>
 
 " scroll (keep 5 line margins)
 set sidescrolloff=5
@@ -86,7 +87,7 @@ set mousehide
 set mouse=
 
 " column limits
-set textwidth=100
+"set textwidth=100
 
 " toggle NerdTree (using leader + n, alternate choice is leader + a)
 nnoremap <leader>n :NERDTreeToggle<cr>
