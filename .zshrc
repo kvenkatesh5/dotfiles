@@ -137,3 +137,6 @@ if [ -f '/Users/kesavan/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kesavan
 if [ -f '/Users/kesavan/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kesavan/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+
+# The next line allows pyenv to automatically change versions
+eval "$(pyenv init -)"

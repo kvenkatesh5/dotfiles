@@ -1,5 +1,5 @@
 # Personal Setup for macOS
-## Basic Settings/Setup 
+## Basic Settings/Setup
 - Download Google Chrome at [website](https://www.google.com/chrome/) Set as default browser
   - Sign in to Chrome user accounts
 - Dock
@@ -34,7 +34,7 @@
 - Command line tools: ```xcode-select --install```
 - Install homebrew ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"``` [website](https://brew.sh/)
   - ```brew doctor``` to make sure install was successful
-- ```brew install git``` 
+- ```brew install git```
 - ```brew install node```
   - a good read for git [here] (https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 - iTerm2: ```brew cask install iterm2```
@@ -65,7 +65,10 @@
 - install Firefox Developer Edition
 - install Geany as a potential tool for editing
 - instlal Dropbox
- 
+- folders
+  - Code folder for software projects
+
+
 
 ## Dotfile management
 - ```ln -s``` creates symbolic link, ```-v``` makes it verbose
@@ -78,7 +81,7 @@
 - ```ln -sv ~/dotfiles/nvim ~/.config/```
 - ```mv .zshrc dotfiles```
 - ```ln -sv ~/dotfiles/.zshrc ~/.zshrc```
-- add to .zshrc 
+- add to .zshrc
 ```
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
@@ -163,13 +166,16 @@ fi
     - MATLAB (student license, university affiliated) - ```userpath('Users/kesavan/Matlab')```, since default is inside documents
 - Zotero
 
+## Google Cloud
+- follow these [instructions](https://cloud.google.com/sdk/docs/install)
+
 ## Github Pro Student Pack
 https://education.github.com/pack/offers?sort=popularity&tag=All
 - HazeOver is an option, but I didn't like it so much
 
 ## Fonts
 - https://github.com/Homebrew/homebrew-cask-fonts
-- Classic Console, Terminus TTF (nice for competitive programming, macvim)
+- Classic Console, Terminus TTF (nice for competitive programming, macvim), Hack, Fira Code
 
 ## Misc Apps
 - Bartender 3
@@ -184,7 +190,7 @@ https://education.github.com/pack/offers?sort=popularity&tag=All
 - Node (npm)
 - LSP + autocompletion
 
-## Some Potentially Useful Gists
+## Some Potentially Useful Gists/Repos
 - [another dev setup README](https://gist.github.com/checkaayush/35e2e99885da14d25e0b806b3d543b46)
 - [sublime text 3 setup](https://gist.github.com/ijy/7399688)
 - [sublime text 3 build for C++](https://gist.github.com/jdhao/3e45ba9164fe3d27c40ea86b6455435f)

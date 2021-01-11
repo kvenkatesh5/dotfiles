@@ -6,9 +6,9 @@ call plug#begin('~/.config/nvim/plugins') " base16 color schemes
 " colorschemes
 Plug 'flazz/vim-colorschemes'
 " file management (see hotkey for toggle)
-Plug 'scrooloose/nerdtree' 
+Plug 'scrooloose/nerdtree'
 " tmux integration
-Plug 'christoomey/vim-tmux-navigator' 
+Plug 'christoomey/vim-tmux-navigator'
 " Auto close parens, braces, brackets, etc
 Plug 'jiangmiao/auto-pairs'
 " Convenience for commenting things in and out
@@ -19,8 +19,6 @@ call plug#end()
 " colorscheme
 autocmd BufEnter * colorscheme gruvbox
 autocmd BufEnter *.py colorscheme Tomorrow-Night
-autocmd BufEnter *.cpp colorscheme cobalt
-autocmd BufEnter *.txt colorscheme cobalt
 
 
 " number
@@ -83,7 +81,7 @@ set sidescrolloff=5
 set scrolloff=5
 
 " I don't like the mouse in vim (alternate is 'set mouse=a')
-set mousehide 
+set mousehide
 set mouse=
 
 " column limits
