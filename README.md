@@ -16,6 +16,7 @@
 - Finder
   - Sidebar: home, Downloads, Desktop, Applications
   - new Finder window shows: home
+  - show all filename extensions
 - Menubar
   - Show Bluetooth in menubar
   - Show battery % in menubar
