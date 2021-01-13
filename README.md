@@ -37,8 +37,6 @@
 - ```brew install git```
 - ```brew install node```
   - a good read for git [here] (https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
-- iTerm2: ```brew cask install iterm2```
-  - add to Dock
 - Terminal: Homebrew theme, change font size 
 - ```git config --global user.name "kvenkatesh5"``` - ```git config --global user.email "..."```
 - ```brew install vim``` installs dependencies for vim
@@ -60,17 +58,19 @@
   - cd and then make symlink to file in home
   - go to dotfiles and change permission of original file (in dotfiles directory) via ```chmod +x ./.macos```
   - go to home and run the file ```./.macos```
-- install Messenger, Whatsapp, Slack for mac, Discord for mac
+- install Messenger, Whatsapp, Slack for mac, Discord for mac, Twitter
 - install f.lux for screen brightness management (a bit annoying but helps eyes)
 - install Firefox Developer Edition
 - install Sublime Text 3, Visual Studio Code
 - install Geany as a potential tool for editing
 - instlal Dropbox
-- folders
-  - Code folder for software projects
 
+## vscode
+- install settings sync extension and update environment
 
 ## iTerm (guake style) dropdown terminal
+- iTerm2: ```brew cask install iterm2``` or via website
+- *this is optional since native mac terminal is decent too
 - open at login, hide from cmd+t, hotkey currently using is SHFT+CRTL (remember =caps lock!) + T
 - I think one idea is just to keep iterm hidden from cmd+tab, disable guake style dropdwon, but set ctrl+t hotkey toquickly open all windows
 
