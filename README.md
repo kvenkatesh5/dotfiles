@@ -48,8 +48,7 @@
   - ```upgrade_oh_my_zsh```
 - Disable ZSH noises (see .zshrc source)
   - resolves permission issues as per [this](https://github.com/ohmyzsh/ohmyzsh/issues/6835)
-- Spotify: ```brew cask install spotify```
-  - move to Dock
+- Install Spotify
 - install Lastpass
 - install Zoom
 - remove launchpad from Dock, it is just a hotkey away (f4 (not with fn))
@@ -63,6 +62,7 @@
 - install Messenger, Whatsapp, Slack for mac, Discord for mac
 - install f.lux for screen brightness management (a bit annoying but helps eyes)
 - install Firefox Developer Edition
+- install Sublime Text 3, Visual Studio Code
 - install Geany as a potential tool for editing
 - instlal Dropbox
 - folders
