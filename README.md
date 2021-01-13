@@ -28,8 +28,7 @@
     - turn off sounds and notification center
 - Mail
     - Use either spark (+ TickTick) or outlook (since college email tied to msft)
-    - When you wish to switch primaries: change primary (through apple mail app), setup open at
-      login, set notification settings, consider tasks app change
+    - When you wish to switch primaries: change primary (through apple mail app), setup open at login, set notification settings, consider tasks app change
     - Apple mail - default primary
 - Command line tools: ```xcode-select --install```
 - Install homebrew ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"``` [website](https://brew.sh/)
@@ -165,6 +164,7 @@ fi
 - Matlab
     - MATLAB (student license, university affiliated) - ```userpath('Users/kesavan/Matlab')```, since default is inside documents
 - Zotero
+- Install dynalist for organizing work/tasks
 
 ## Google Cloud
 - follow these [instructions](https://cloud.google.com/sdk/docs/install)
@@ -199,4 +199,4 @@ https://education.github.com/pack/offers?sort=popularity&tag=All
 - [latex clean shell script](https://gist.github.com/djsutherland/266983)
 - [sample git config file](https://gist.github.com/pksunkara/988716)
 - [iterm2-solarized instructions](https://gist.github.com/kevin-smets/8568070)
--
+- [complete macos setup for hackers](https://github.com/mathiasbynens/dotfiles)
