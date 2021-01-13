@@ -80,6 +80,9 @@
 - ```mv ~/.gitconfig ~/dotfiles/.gitconfig```
 - ```ln -sv ~/dotfiles/.gitconfig ~``` sets up symbolic link
 
+## vim
+- ```ln -sv ~/dotfiles/.vimrc ~/.vimrc```
+
 ## nvim
 - ```mkdir ~/dotfiles/nvim```
 - ```mkdir ~/.config```
