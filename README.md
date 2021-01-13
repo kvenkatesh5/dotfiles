@@ -60,7 +60,7 @@
   - cd and then make symlink to file in home
   - go to dotfiles and change permission of original file (in dotfiles directory) via ```chmod +x ./.macos```
   - go to home and run the file ```./.macos```
-- install Messenger, Whatsapp, Slack for mac
+- install Messenger, Whatsapp, Slack for mac, Discord for mac
 - install f.lux for screen brightness management (a bit annoying but helps eyes)
 - install Firefox Developer Edition
 - install Geany as a potential tool for editing
