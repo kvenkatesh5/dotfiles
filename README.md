@@ -39,6 +39,7 @@
   - a good read for git [here] (https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 - iTerm2: ```brew cask install iterm2```
   - add to Dock
+- Terminal: Homebrew theme, change font size 
 - ```git config --global user.name "kvenkatesh5"``` - ```git config --global user.email "..."```
 - ```brew install vim``` installs dependencies for vim
 - ```brew install nvim``` because I want to use neovim!
@@ -68,6 +69,10 @@
 - folders
   - Code folder for software projects
 
+
+## iTerm (guake style) dropdown terminal
+- open at login, hide from cmd+t, hotkey currently using is SHFT+CRTL (remember =caps lock!) + T
+- I think one idea is just to keep iterm hidden from cmd+tab, disable guake style dropdwon, but set ctrl+t hotkey toquickly open all windows
 
 
 ## Dotfile management
@@ -149,10 +154,6 @@ fi
     - to add environment kernel to jupyter ```python -m ipykernel install --user --name tensorflow --display-name "Python 3.7 (tensorflow)"```
 - follow Heaton's tutorial to setup Tensorflow (if Tensorflow updates, expect that the video will update
   also)
-
-## iTerm (guake style) dropdown terminal
-- open at login, hide from cmd+t, hotkey currently using is SHFT+CRTL (remember =caps lock!) + T
-- I think one idea is just to keep iterm hidden from cmd+tab, disable guake style dropdwon, but set ctrl+t hotkey toquickly open all windows
 
 ## JHU
 ### MARCC (SSH)
