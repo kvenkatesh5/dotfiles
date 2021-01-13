@@ -83,3 +83,8 @@ set mouse=a
 set title
 " show the (partial) command as it's being typed
 set showcmd
+" Plugins
+call plug#begin('~/.vim/plugged')
+" vim-tmux integration
+Plug 'christoomey/vim-tmux-navigator'
+call plug#end()

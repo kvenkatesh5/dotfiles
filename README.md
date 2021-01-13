@@ -82,6 +82,9 @@
 
 ## vim
 - ```ln -sv ~/dotfiles/.vimrc ~/.vimrc```
+- ```curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim```
+    - useful link for [vim plug](https://github.com/junegunn/vim-plug)
 
 ## nvim
 - ```mkdir ~/dotfiles/nvim```
@@ -110,6 +113,14 @@ fi
 - use this for .tmux.conf to incorporate vim [here](https://github.com/dduan/dotfiles/blob/master/.tmux.conf)
 - to source the file, go into tmux and reach command prompt (via ```C-b :```) and type ```source-file ~/.tmux.conf```
 
+## vim-tmux integration on mac Terminal
+- ```brew install tmux```
+- plug 'christoomey/vim-tmux-navigator' in .vimrc
+- after making .tmux.conf file, run ```ln -sv ~/dotfiles/.tmux.conf ~/.tmux.conf```
+- use this for .tmux.conf to incorporate vim [here](https://github.com/dduan/dotfiles/blob/master/.tmux.conf)
+- to source the file, go into tmux and reach command prompt (via ```C-b :```) and type ```source-file ~/.tmux.conf```
+
+
 ## Latex
 - ```brew cask install basictex```
    - The alternate option is ```mactex``` but I want to use vim as my editor so I don't need all the extra
@@ -128,7 +139,8 @@ fi
 - install R and Rstudio from internet
 
 ## Java
-- https://www.oracle.com/java/technologies/javase-downloads.html
+- https://adoptopenjdk.net/
+- choose OpenJDK 8 (LTS) and Hotspot for JVM
 
 ## Jetbrains
 - Get the jetbrains suite using a college email!
