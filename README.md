@@ -31,6 +31,9 @@
     - Use either spark (+ TickTick) or outlook (since college email tied to msft)
     - When you wish to switch primaries: change primary (through apple mail app), setup open at login, set notification settings, consider tasks app change
     - Apple mail - default primary
+- Desktop
+    - create folder Screenshots
+    - ```defaults write com.apple.screencapture location /Users/kesavan/Desktop/Screenshots```
 - Command line tools: ```xcode-select --install```
 - Install homebrew ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"``` [website](https://brew.sh/)
   - ```brew doctor``` to make sure install was successful
@@ -67,6 +70,7 @@
 
 ## vscode
 - install settings sync extension and update environment
+- ```defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false```
 
 ## iTerm (guake style) dropdown terminal
 - iTerm2: ```brew cask install iterm2``` or via website
